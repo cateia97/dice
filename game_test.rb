@@ -6,11 +6,13 @@ require "./game"
 
 class GameTest < MiniTest::Test
 
+#passed
   def test_loaded_dice_are_predictable
     dice = LoadedDice.new
     assert_equal 6, dice.roll
   end
 
+#passed 
   def test_psychic_dice_know_the_future
     future = [2,3,6,1]
     dice = PsychicDice.new future
@@ -19,6 +21,7 @@ class GameTest < MiniTest::Test
     end
   end
 
+# passed
   def test_players_have_dice
     dice  = Dice.new
     alice = Player.new "alice", dice
